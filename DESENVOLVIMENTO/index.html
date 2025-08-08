@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendário 2025.2.1</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Topo / Logo -->
+        <div class="topbar">
+            <img src="logo.png" alt="Logo da instituição" width="285" height="75" class="logo" />
+        </div>
+
+        <!-- Grid principal -->
+        <div class="grid">
+
+            <!-- Calendário -->
+            <section class="card card--wide" aria-labelledby="titulo-calendario">
+                <div id="calendario" class="fade-section is-visible" aria-live="polite">
+                    <h2 id="titulo-calendario" class="card__title">CALENDÁRIO 2025.2.1</h2>
+                    <p class="card__subtitle">Disciplina Azul</p>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="table__th table__th--left">Informações Importantes</th>
+                                <th class="table__th table__th--right">Datas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__tr">
+                                <td class="table__td">Avaliação NP1 (Questionários)</td>
+                                <td class="table__td table__td--right">01 a 31 de Outubro</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td">Maratona do Conhecimento</td>
+                                <td class="table__td table__td--right">23 de <span>Outubro</span></td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td">Agendamento Avaliação NP2</td>
+                                <td class="table__td table__td--right">03 de Novembro a 23 de Dezembro</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td">Avaliação NP2 (Presencial)</td>
+                                <td class="table__td table__td--right">07 a 10 Janeiro de 2026</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td">Agendamento 2ª Chamada NP2</td>
+                                <td class="table__td table__td--right">12 a 15 Janeiro de 2026</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td">2ª Chamada Avaliação NP2 (Presencial)</td>
+                                <td class="table__td table__td--right">17 Janeiro de 2026</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__td">Avaliação Final (Recuperação de Nota)</td>
+                                <td class="table__td table__td--right">22 e 23 de Janeiro de 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="informativo_calendario" class="fade-section" aria-live="polite">
+                    <h3 class="card__title">Informações complementares</h3>
+                    <p class="card__text">As cores representam diferentes áreas do conhecimento.</p>
+                </div>
+
+                <div class="card__actions">
+                    <button id="btn_saber_mais_calendario" class="link-button">Saber mais</button>
+                    <button id="btn_fechar_calendario" class="link-button is-hidden">Fechar</button>
+                </div>
+            </section>
+
+            <!-- Legenda -->
+            <aside class="card-legenda" aria-labelledby="titulo-legenda">
+                <div id="cores" class="fade-section is-visible" aria-live="polite">
+                    <h3 id="titulo-legenda" class="card__legend-title">Verifique as Cores das Disciplinas</h3>
+
+                    <p class="legend-item">
+                        <span class="dot dot--blue"></span>
+                        <span class="legend-text">
+                            <strong>Disciplina Azul</strong><br />
+                            <span class="legend-sub">Avaliação NP2 Presencial (Agendamento)</span>
+                        </span>
+                    </p>
+
+                    <p class="legend-item">
+                        <span class="dot dot--green"></span>
+                        <span class="legend-text">
+                            <strong>Disciplina Verde</strong><br />
+                            <span class="legend-sub">Sem Avaliação NP2 Presencial</span>
+                        </span>
+                    </p>
+
+                    <p class="legend-item">
+                        <span class="dot dot--yellow"></span>
+                        <span class="legend-text">
+                            <strong>Disciplina Amarela</strong><br />
+                            <span class="legend-sub">Avaliação NP2 Presencial (Agendamento)</span>
+                        </span>
+                    </p>
+                </div>
+
+                <div id="conteudo" class="fade-section" aria-live="polite">
+                    <h3 class="card__title">Informações complementares</h3>
+                    <p class="card__text">As cores representam diferentes áreas do conhecimento.</p>
+                </div>
+
+                <div class="card__actions">
+                    <button id="btn_saber_mais_legenda" class="link-button">Saber mais</button>
+                    <button id="btn_fechar_legenda" class="link-button is-hidden">Fechar</button>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
