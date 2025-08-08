@@ -63,14 +63,15 @@ html, body {
   border-radius: 12px;
   padding: clamp(8px, 1.8vw, 12px);
   box-shadow: var(--shadow);
-  transition: height .35s ease, transform .3s, box-shadow .3s; /* + height */
-  position: relative; /* já estava */
-  overflow: hidden;   /* evita “vazar” conteúdo durante a animação */
+  transition: height .35s ease, transform .3s, box-shadow .3s;
+  position: relative; /* necessário para fade-section sobrepor */
+  overflow: hidden;   /* evita “vazar” conteúdo na animação */
 }
 
 .card-legenda{
-  max-height: 300px;
-  overflow: auto;
+  max-height: none;
+  height: auto;   /* sem limite fixo */
+  overflow: visible;  /* deixa conteúdo expandir */
 }
 
 .card--wide{
@@ -134,9 +135,8 @@ html, body {
 .is-hidden{ display:none !important; }
 
 /* ===== Seções com fade (SOBREPOSTAS) ===== */
-/* As seções ocupam o MESMO espaço. A oculta não influi no layout */
 .fade-section{
-  position: absolute;  /* sobrepõe dentro do card */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -150,7 +150,7 @@ html, body {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  position: relative;   /* só a visível entra no fluxo e define a altura */
+  position: relative;
   z-index: 2;
 }
 
@@ -162,8 +162,9 @@ html, body {
   font-size: clamp(0.75rem, 1.6vw, 0.9rem);
   overflow: hidden;
 }
+
 .table__th{
-  padding: 8px;
+  padding: 6px 4px; /* menos espaço lateral */
   color: var(--accent);
   font-size: clamp(0.8rem, 1.7vw, 1rem);
   white-space: nowrap;
@@ -173,7 +174,7 @@ html, body {
 
 .table__tr{ border-bottom: 1px solid var(--border); }
 .table__td{
-  padding: 6px;
+  padding: 4px 4px; /* menos espaço entre colunas */
   font-size: clamp(0.75rem, 1.6vw, 0.9rem);
   vertical-align: top;
 }
@@ -222,7 +223,60 @@ html, body {
   .dot{ width: 14px; height: 14px; }
 }
 
-/* Acessibilidade */
+/* ===== Mobile: Tabela empilhada ===== */
+@media (max-width: 600px){
+
+  .table, .table__td, .table__th {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .card--wide .table{
+    min-width: initial;
+  }
+
+  .table{
+    display: block;
+    width: 100%;
+  }
+  .table thead{
+    display: none;
+  }
+  .table tbody{
+    display: block;
+    width: 100%;
+  }
+  .table__tr{
+    display: block;
+    border-bottom: 1px solid var(--border);
+    padding: 8px 0;
+  }
+  .table__td{
+    display: block;
+    width: 100%;
+    padding: 4px 4px;
+    text-align: left;
+  }
+  .table__td--right{
+    text-align: left;
+  }
+
+  .table__tr .table__td:nth-child(2)::before{
+    content: "Data: ";
+    font-weight: bold;
+    color: var(--accent);
+    margin-right: 6px;
+  }
+
+  .card__title{
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+  .card__subtitle{
+    font-size: clamp(0.85rem, 3.8vw, 1rem);
+  }
+}
+
+/* ===== Acessibilidade ===== */
 @media (prefers-reduced-motion: reduce){
   *{ transition: none !important; animation: none !important; }
 }
