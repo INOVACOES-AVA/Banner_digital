@@ -20,7 +20,8 @@ html, body {
 
 /* ===== Layout base ===== */
 .wrapper{
-  max-width: 1050px;
+  max-width: auto;
+  max-height: auto;
   margin: 0 auto;
   padding: clamp(8px, 2vw, 16px);
   position: relative;
