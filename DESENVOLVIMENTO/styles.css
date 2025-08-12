@@ -8,11 +8,17 @@
   --border:#1f1f1f;
 }
 
-* { box-sizing: border-box; }
+/* Reset + mídia fluida */
+*{ box-sizing: border-box; }
+img, video, canvas, svg{ max-width: 100%; height: auto; }
+iframe{ width: 100%; max-width: 100%; border: 0; }
 
-html, body {
+/* Página totalmente responsiva */
+html, body{
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
   font-family: Arial, sans-serif;
   color: var(--text);
   background: #fff;
@@ -20,8 +26,8 @@ html, body {
 
 /* ===== Layout base ===== */
 .wrapper{
-  max-width: auto;
-  max-height: auto;
+  max-width: 1050px;              /* limita no desktop, expande no mobile */
+  width: 100%;
   margin: 0 auto;
   padding: clamp(8px, 2vw, 16px);
   position: relative;
@@ -30,6 +36,8 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
+  overflow: hidden;                /* evita bleed do bg com radius */
+  isolation: isolate;
 }
 
 /* Topbar responsiva */
@@ -52,7 +60,7 @@ html, body {
 /* ===== Grade ===== */
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: clamp(12px, 2vw, 20px);
   position: relative;
 }
@@ -62,7 +70,7 @@ html, body {
 .card-legenda{
   background: rgba(0,0,0,0.85);
   border-radius: 12px;
-  padding: clamp(8px, 1.8vw, 12px);
+  padding: clamp(8px, 1vw, 12px);
   box-shadow: var(--shadow);
   transition: height .35s ease, transform .3s, box-shadow .3s;
   position: relative; /* necessário para fade-section sobrepor */
@@ -71,13 +79,14 @@ html, body {
 
 .card-legenda{
   max-height: none;
-  height: auto;   /* sem limite fixo */
-  overflow: visible;  /* deixa conteúdo expandir */
+  height: auto;      /* sem limite fixo */
+  overflow: visible; /* deixa conteúdo expandir */
 }
 
+/* Card largo se ajusta conforme a grade */
 .card--wide{
   grid-column: span 2;
-  overflow-x: auto;
+  overflow-x: auto; /* só aparece quando precisar */
 }
 
 @media (hover: hover) and (pointer: fine){
@@ -88,7 +97,7 @@ html, body {
   }
 }
 
-/* ===== Tipografia menor ===== */
+/* ===== Tipografia ===== */
 .card__title{
   text-align: center;
   font-weight: bold;
@@ -113,7 +122,7 @@ html, body {
 
 .card__text{
   font-size: clamp(0.75rem, 1.6vw, 0.9rem);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* ===== Ações ===== */
@@ -121,7 +130,7 @@ html, body {
   display:flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 8px; /* aproxima o botão do conteúdo */
+  margin-top: 8px;
 }
 
 .link-button{
@@ -138,8 +147,7 @@ html, body {
 /* ===== Seções com fade (SOBREPOSTAS) ===== */
 .fade-section{
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0 auto auto 0; /* top:0; left:0; */
   width: 100%;
   opacity: 0;
   transform: translateY(-10px);
@@ -161,7 +169,6 @@ html, body {
   border-collapse: collapse;
   color: var(--text);
   font-size: clamp(0.75rem, 1.6vw, 0.9rem);
-  overflow: hidden;
 }
 
 .table__th{
@@ -181,6 +188,7 @@ html, body {
 }
 .table__td--right{ text-align: right; }
 
+/* tabela em cartões largos no desktop */
 .card--wide .table{
   min-width: 640px;
 }
@@ -209,6 +217,10 @@ html, body {
 .legend-sub{ font-size: clamp(0.7rem, 1.5vw, 0.85rem); color: var(--muted); }
 
 /* ===== Breakpoints ===== */
+@media (max-width: 1200px){
+  .grid{ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+}
+
 @media (max-width: 992px){
   .card--wide{ grid-column: span 2; }
 }
@@ -219,9 +231,8 @@ html, body {
   .wrapper{ border-radius: 8px; }
 }
 
-@media (max-width: 480px){
-  .wrapper{ padding: 8px; }
-  .dot{ width: 14px; height: 14px; }
+@media (max-width: 600px){
+  .grid{ grid-template-columns: 1fr; } /* força 1 coluna quando muito estreito */
 }
 
 /* ===== Mobile: Tabela empilhada ===== */
@@ -232,21 +243,11 @@ html, body {
     overflow-wrap: anywhere;
   }
 
-  .card--wide .table{
-    min-width: initial;
-  }
+  .card--wide .table{ min-width: initial; }
 
-  .table{
-    display: block;
-    width: 100%;
-  }
-  .table thead{
-    display: none;
-  }
-  .table tbody{
-    display: block;
-    width: 100%;
-  }
+  .table{ display: block; width: 100%; }
+  .table thead{ display: none; }
+  .table tbody{ display: block; width: 100%; }
   .table__tr{
     display: block;
     border-bottom: 1px solid var(--border);
@@ -258,10 +259,9 @@ html, body {
     padding: 4px 4px;
     text-align: left;
   }
-  .table__td--right{
-    text-align: left;
-  }
+  .table__td--right{ text-align: left; }
 
+  /* rótulo exemplo p/ 2ª coluna (ajuste conforme suas colunas) */
   .table__tr .table__td:nth-child(2)::before{
     content: "Data: ";
     font-weight: bold;
@@ -269,12 +269,8 @@ html, body {
     margin-right: 6px;
   }
 
-  .card__title{
-    font-size: clamp(0.95rem, 4vw, 1.1rem);
-  }
-  .card__subtitle{
-    font-size: clamp(0.85rem, 3.8vw, 1rem);
-  }
+  .card__title{ font-size: clamp(0.95rem, 4vw, 1.1rem); }
+  .card__subtitle{ font-size: clamp(0.85rem, 3.8vw, 1rem); }
 }
 
 /* ===== Acessibilidade ===== */
