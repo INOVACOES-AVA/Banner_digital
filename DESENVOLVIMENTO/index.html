@@ -127,6 +127,27 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+(function () {
+  function postHeight() {
+    var h = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    );
+    window.parent.postMessage({ type: 'BANNER_HEIGHT', height: h }, 'https://seu-dominio-pai.aqui');
+  }
+
+  // Observa mudanças de layout também
+  var ro = new ResizeObserver(postHeight);
+  ro.observe(document.documentElement);
+
+  window.addEventListener('load', postHeight);
+  window.addEventListener('resize', postHeight);
+
+  // (Opcional) envie também depois de X ms para garantir
+  setTimeout(postHeight, 300);
+})();
+</script>
 </body>
 
 </html>
