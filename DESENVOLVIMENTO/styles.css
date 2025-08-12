@@ -13,12 +13,12 @@
 img, video, canvas, svg{ max-width: 100%; height: auto; }
 iframe{ width: 100%; max-width: 100%; border: 0; }
 
-/* Página full-screen responsiva */
+/* Página totalmente responsiva */
 html, body{
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100svh;
+  min-height: 100%;
   font-family: Arial, sans-serif;
   color: var(--text);
   background: #fff;
@@ -26,22 +26,18 @@ html, body{
 
 /* ===== Layout base ===== */
 .wrapper{
+  max-width: 1050px;              /* limita no desktop, expande no mobile */
   width: 100%;
-  min-height: 100svh;
-  margin: 0;
-  padding: clamp(16px, 3vw, 32px); /* mais espaço */
+  margin: 0 auto;
+  padding: clamp(8px, 2vw, 16px);
   position: relative;
   background-image: url('FUNDO_AZUL_BI.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 0;
-  overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;                /* evita bleed do bg com radius */
   isolation: isolate;
-  padding-left: max(clamp(16px, 3vw, 32px), env(safe-area-inset-left));
-  padding-right: max(clamp(16px, 3vw, 32px), env(safe-area-inset-right));
-  padding-top: max(clamp(16px, 3vw, 32px), env(safe-area-inset-top));
-  padding-bottom: max(clamp(16px, 3vw, 32px), env(safe-area-inset-bottom));
 }
 
 /* Topbar responsiva */
@@ -50,13 +46,13 @@ html, body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
 }
 
 /* Logo */
 .logo{
   display: block;
-  max-width: min(250px, 60vw);
+  max-width: min(200px, 50vw);
   height: auto;
   margin: 0 auto;
 }
@@ -64,8 +60,8 @@ html, body{
 /* ===== Grade ===== */
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(20px, 3vw, 32px);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(12px, 2vw, 20px);
   position: relative;
 }
 
@@ -73,30 +69,30 @@ html, body{
 .card,
 .card-legenda{
   background: rgba(0,0,0,0.85);
-  border-radius: 16px;
-  padding: clamp(16px, 2vw, 24px);
+  border-radius: 12px;
+  padding: clamp(8px, 1vw, 12px);
   box-shadow: var(--shadow);
   transition: height .35s ease, transform .3s, box-shadow .3s;
-  position: relative;
-  overflow: hidden;
+  position: relative; /* necessário para fade-section sobrepor */
+  overflow: hidden;   /* evita “vazar” conteúdo na animação */
 }
 
 .card-legenda{
   max-height: none;
-  height: auto;
-  overflow: visible;
+  height: auto;      /* sem limite fixo */
+  overflow: visible; /* deixa conteúdo expandir */
 }
 
 /* Card largo se ajusta conforme a grade */
 .card--wide{
   grid-column: span 2;
-  overflow-x: auto;
+  overflow-x: auto; /* só aparece quando precisar */
 }
 
 @media (hover: hover) and (pointer: fine){
   .card:hover,
   .card-legenda:hover{
-    transform: scale(1.04);
+    transform: scale(1.03);
     box-shadow: var(--shadow-hover);
   }
 }
@@ -107,11 +103,11 @@ html, body{
   font-weight: bold;
   margin: 0;
   color: var(--accent);
-  font-size: clamp(1.25rem, 3vw, 2rem); /* maior */
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .card__legend-title{
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   color: var(--accent);
   margin-top: 0;
 }
@@ -120,21 +116,21 @@ html, body{
   text-align:center;
   font-weight: bold;
   color: var(--accent);
-  margin: 10px 0;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  margin: 5px 0;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
 }
 
 .card__text{
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.6;
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
+  line-height: 1.45;
 }
 
 /* ===== Ações ===== */
 .card__actions{
   display:flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 6px;
+  margin-top: 8px;
 }
 
 .link-button{
@@ -142,16 +138,16 @@ html, body{
   border: none;
   color: #fde047;
   cursor: pointer;
-  padding: 6px 0;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding: 4px 0;
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
 }
 .link-button:hover{ text-decoration: underline; }
 .is-hidden{ display:none !important; }
 
-/* ===== Seções com fade ===== */
+/* ===== Seções com fade (SOBREPOSTAS) ===== */
 .fade-section{
   position: absolute;
-  inset: 0 auto auto 0;
+  inset: 0 auto auto 0; /* top:0; left:0; */
   width: 100%;
   opacity: 0;
   transform: translateY(-10px);
@@ -172,43 +168,44 @@ html, body{
   width: 100%;
   border-collapse: collapse;
   color: var(--text);
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
 }
 
 .table__th{
-  padding: 10px 6px;
+  padding: 6px 4px; /* menos espaço lateral */
   color: var(--accent);
-  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
   white-space: nowrap;
 }
-.table__th--left{ text-align: left; font-size: clamp(1.1rem, 2.2vw, 1.4rem); }
+.table__th--left{ text-align: left; font-size: clamp(0.85rem, 1.8vw, 1.05rem); }
 .table__th--right{ text-align: right; }
 
 .table__tr{ border-bottom: 1px solid var(--border); }
 .table__td{
-  padding: 8px 6px;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  padding: 4px 4px; /* menos espaço entre colunas */
+  font-size: clamp(0.75rem, 1.6vw, 0.9rem);
   vertical-align: top;
 }
 .table__td--right{ text-align: right; }
 
+/* tabela em cartões largos no desktop */
 .card--wide .table{
-  min-width: 800px;
+  min-width: 640px;
 }
 
 /* ===== Legenda ===== */
 .legend-item{
-  margin: 12px 0;
+  margin: 8px 0;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .dot{
   display:inline-block;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
 }
 
@@ -216,12 +213,12 @@ html, body{
 .dot--green{ background:#22c55e; }
 .dot--yellow{ background:#fde047; }
 
-.legend-text{ font-size: clamp(1rem, 2vw, 1.25rem); }
-.legend-sub{ font-size: clamp(0.9rem, 1.8vw, 1.1rem); color: var(--muted); }
+.legend-text{ font-size: clamp(0.75rem, 1.6vw, 0.9rem); }
+.legend-sub{ font-size: clamp(0.7rem, 1.5vw, 0.85rem); color: var(--muted); }
 
 /* ===== Breakpoints ===== */
 @media (max-width: 1200px){
-  .grid{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .grid{ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
 
 @media (max-width: 992px){
@@ -231,10 +228,11 @@ html, body{
 @media (max-width: 768px){
   .card--wide{ grid-column: span 1; }
   .topbar{ justify-content: center; }
+  .wrapper{ border-radius: 8px; }
 }
 
 @media (max-width: 600px){
-  .grid{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; } /* força 1 coluna quando muito estreito */
 }
 
 /* ===== Mobile: Tabela empilhada ===== */
@@ -253,16 +251,17 @@ html, body{
   .table__tr{
     display: block;
     border-bottom: 1px solid var(--border);
-    padding: 12px 0;
+    padding: 8px 0;
   }
   .table__td{
     display: block;
     width: 100%;
-    padding: 6px 4px;
+    padding: 4px 4px;
     text-align: left;
   }
   .table__td--right{ text-align: left; }
 
+  /* rótulo exemplo p/ 2ª coluna (ajuste conforme suas colunas) */
   .table__tr .table__td:nth-child(2)::before{
     content: "Data: ";
     font-weight: bold;
@@ -270,8 +269,8 @@ html, body{
     margin-right: 6px;
   }
 
-  .card__title{ font-size: clamp(1.1rem, 4vw, 1.5rem); }
-  .card__subtitle{ font-size: clamp(1rem, 3.8vw, 1.4rem); }
+  .card__title{ font-size: clamp(0.95rem, 4vw, 1.1rem); }
+  .card__subtitle{ font-size: clamp(0.85rem, 3.8vw, 1rem); }
 }
 
 /* ===== Acessibilidade ===== */
