@@ -1,67 +1,229 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banner Aula Ao Vivo</title>
-</head>
-<body style="font-family: 'Inter', sans-serif; background-color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;">
+  </head>
+  <body
+    style="
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    "
+  >
     <!-- Contêiner principal do banner com cantos arredondados -->
-    <div style="background-image: url('https://digital.uniateneu.edu.br/draftfile.php/748767/user/draft/191798347/main-banner%20%281%29.png'); background-size: cover; background-position: center; border-radius: 2rem; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); overflow: hidden; position: relative; width: 100%; max-width: 64rem; margin-left: auto; margin-right: auto; color: white; text-align: center;">
-        <!-- Overlay preto com 60% de opacidade -->
-        <div style="background-color: rgba(0, 0, 0, 0.6); border-radius: 2rem; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/draftfile.php/748767/user/draft/191798347/main-banner%20%281%29.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 64rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        text-align: center;
+      "
+    >
+      <!-- Overlay preto com 60% de opacidade -->
+      <div
+        style="
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 2rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        "
+      ></div>
 
-        <!-- Conteúdo do banner -->
-        <div style="position: relative; z-index: 10;">
-            <!-- Parte superior amarela -->
-            <div style="background: linear-gradient(to right, #f29a00, #ffc400); padding: 1rem; display: flex; justify-content: center; align-items: center;">
-                <!-- Imagem do logo UniATENEU -->
-                <img src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510" alt="Logo UniATENEU" style="height: 4rem; width: 15rem;">
-            </div>
-
-            <!-- Conteúdo principal azul escuro -->
-            <div style="padding-top: 0; padding-bottom: 1.5rem; padding-left: 2.5rem; padding-right: 2.5rem;">
-                <!-- Título -->
-                <p style="font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; margin-top: 1.5rem;color: transparent; background-image: linear-gradient(to right, #f29a00, #ffc400); background-clip: text; -webkit-background-clip: text;;margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
-                    Assista a aula&nbsp;<span style="background-image: linear-gradient(to right, #ff4265, #d90429); color: transparent; -webkit-background-clip: text; background-clip: text;">ao vivo</span>!
-                </p>
-
-                <!-- Descrição principal -->
-                <p style="font-size: 1.125rem; line-height: 1.75rem; font-weight: 300; margin-bottom: 1.5rem; line-height: 1.625;">
-                    Acompanhe as datas indicadas pelo professor e garanta seu sucesso acadêmico!
-                </p>
-
-                <!-- Título secundário -->
-                <p style="font-size: 1.4rem; line-height: 1.75rem; font-weight: 700; margin-bottom: 1rem; text-align: left;">
-                    Por que assistir ao vivo?
-                </p>
-
-                <!-- Lista de benefícios com bullet points -->
-                <ul style="text-align: left; font-size: 1.125rem; line-height: 1.75rem; font-weight: 300; margin-bottom: 2rem; list-style-type: disc; list-style-position: inside;">
-                    <li style="margin-bottom: 0.5rem;"><span style="font-weight: 900;"></span>
-                        <strong style="font-weight: 600; color: transparent; background-image: linear-gradient(to right, #f29a00, #ffc400); background-clip: text; -webkit-background-clip: text;">
-                            Tire dúvidas</strong> em tempo real com o professor.
-                    </li>
-                    <li style="margin-bottom: 0.5rem;"><span style="font-weight: 900;"></span>
-                        <strong style="font-weight: 600; color: transparent; background-image: linear-gradient(to right, #f29a00, #ffc400); background-clip: text; -webkit-background-clip: text;">
-                            Aula gravada:</strong> Acesse quando quiser para revisar.
-                    </li>
-                    <li style="margin-bottom: 0.5rem;"><span style="font-weight: 900;"></span>
-                        <strong style="font-weight: 600; color: transparent; background-image: linear-gradient(to right, #f29a00, #ffc400); background-clip: text; -webkit-background-clip: text;">
-                            Dicas de especialistas:</strong> Aprenda com quem entende do assunto.
-                    </li>
-                    <li style="margin-bottom: 0.5rem;"><span style="font-weight: 900;"></span>
-                        <strong style="font-weight: 600; color: transparent; background-image: linear-gradient(to right, #f29a00, #ffc400); background-clip: text; -webkit-background-clip: text;">
-                            Interação e networking:</strong> Conecte-se com colegas e expanda seu conhecimento.
-                    </li>
-                </ul>
-
-                <!-- Chamada para a ação (CTA) -->
-                <a href="https://digital.uniateneu.edu.br/course/view.php?id=35397&section=1" style="font-size: 1.125rem; line-height: 1.75rem; font-weight: 700; color: transparent; background-image: linear-gradient(to right, #f29a00, #ffc400); background-clip: text; transition-property: color; transition-duration: 300ms; text-decoration: none;">
-                    Clique no Play e participe!
-                </a>
-            </div>
+      <!-- Conteúdo do banner -->
+      <div style="position: relative; z-index: 10">
+        <!-- Parte superior amarela -->
+        <div
+          style="
+            background: linear-gradient(to right, #f29a00, #ffc400);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <!-- Imagem do logo UniATENEU -->
+          <img
+            src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510"
+            alt="Logo UniATENEU"
+            style="height: 4rem; width: 15rem"
+          />
         </div>
+
+        <!-- Conteúdo principal azul escuro -->
+        <div
+          style="
+            padding-top: 0;
+            padding-bottom: 1.5rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+          "
+        >
+          <!-- Título -->
+          <p
+            style="
+              font-size: 2.25rem;
+              line-height: 2.5rem;
+              font-weight: 700;
+              margin-top: 1.5rem;
+              color: transparent;
+              background-image: linear-gradient(to right, #f29a00, #ffc400);
+              background-clip: text;
+              -webkit-background-clip: text;
+              margin-bottom: 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            Assista a aula&nbsp;<span
+              style="
+                background-image: linear-gradient(to right, #ff4265, #d90429);
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+              "
+              >ao vivo</span
+            >!
+          </p>
+
+          <!-- Descrição principal -->
+          <p
+            style="
+              font-size: 1.125rem;
+              line-height: 1.75rem;
+              font-weight: 300;
+              margin-bottom: 1.5rem;
+              line-height: 1.625;
+            "
+          >
+            Acompanhe as datas indicadas pelo professor e garanta seu sucesso
+            acadêmico!
+          </p>
+
+          <!-- Título secundário -->
+          <p
+            style="
+              font-size: 1.4rem;
+              line-height: 1.75rem;
+              font-weight: 700;
+              margin-bottom: 1rem;
+              text-align: left;
+            "
+          >
+            Por que assistir ao vivo?
+          </p>
+
+          <!-- Lista de benefícios com bullet points -->
+          <ul
+            style="
+              text-align: left;
+              font-size: 1.125rem;
+              line-height: 1.75rem;
+              font-weight: 300;
+              margin-bottom: 2rem;
+              list-style-type: disc;
+              list-style-position: inside;
+            "
+          >
+            <li style="margin-bottom: 0.5rem">
+              <span style="font-weight: 900"></span>
+              <strong
+                style="
+                  font-weight: 600;
+                  color: transparent;
+                  background-image: linear-gradient(to right, #f29a00, #ffc400);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                "
+              >
+                Tire dúvidas</strong
+              >
+              em tempo real com o professor.
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <span style="font-weight: 900"></span>
+              <strong
+                style="
+                  font-weight: 600;
+                  color: transparent;
+                  background-image: linear-gradient(to right, #f29a00, #ffc400);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                "
+              >
+                Aula gravada:</strong
+              >
+              Acesse quando quiser para revisar.
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <span style="font-weight: 900"></span>
+              <strong
+                style="
+                  font-weight: 600;
+                  color: transparent;
+                  background-image: linear-gradient(to right, #f29a00, #ffc400);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                "
+              >
+                Dicas de especialistas:</strong
+              >
+              Aprenda com quem entende do assunto.
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <span style="font-weight: 900"></span>
+              <strong
+                style="
+                  font-weight: 600;
+                  color: transparent;
+                  background-image: linear-gradient(to right, #f29a00, #ffc400);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                "
+              >
+                Interação e networking:</strong
+              >
+              Conecte-se com colegas e expanda seu conhecimento.
+            </li>
+          </ul>
+
+          <!-- Chamada para a ação (CTA) -->
+          <a
+            href="https://digital.uniateneu.edu.br/course/view.php?id=35397&section=1"
+            style="
+              font-size: 1.125rem;
+              line-height: 1.75rem;
+              font-weight: 700;
+              color: transparent;
+              background-image: linear-gradient(to right, #f29a00, #ffc400);
+              background-clip: text;
+              transition-property: color;
+              transition-duration: 300ms;
+              text-decoration: none;
+            "
+          >
+            Clique no Play e participe!
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
