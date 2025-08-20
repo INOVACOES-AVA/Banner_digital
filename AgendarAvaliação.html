@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Agendar Avaliação</title>
+  </head>
+  <body
+    style="
+      font-family: 'Inter', Arial, sans-serif;
+      background-color: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+      margin: 0;
+    "
+  >
+    <!-- Contêiner principal do banner com cantos arredondados e cor de fundo sólida -->
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/pluginfile.php/1004305/course/section/240343/main-banner%20%281%29.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 64rem;
+        margin: 0 auto;
+        color: #fff;
+        padding: 2rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      "
+    >
+      <!-- Overlay preto com 60% de opacidade -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 2rem;
+          z-index: 5;
+        "
+      ></div>
+
+      <!-- Conteúdo do banner -->
+      <div
+        style="
+          position: relative;
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        "
+      >
+        <img
+          src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510"
+          alt="Logo UniATENEU"
+          style="
+            height: 4rem;
+            width: 15rem;
+            max-width: 60vw;
+            object-fit: contain;
+            filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+          "
+        />
+        <h2
+          style="
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-weight: 800;
+            margin: 0.1rem 0 1.5rem 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+          "
+        >
+          <!-- Ícone de Alerta -->
+          <span
+            style="
+              font-size: 1em;
+              margin-right: 0.5rem;
+              color: transparent;
+              background-image: linear-gradient(to right, #f29a00, #ffc400);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+            >Atenção estudante!</span
+          >
+        </h2>
+        
+        <!-- Contêiner de duas colunas para os parágrafos e o botão -->
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            gap: 2rem;
+          "
+        >
+          <!-- Coluna da Esquerda: Parágrafos -->
+          <div style="flex: 1 1 60%; min-width: 250px; text-align: justify;">
+            <p
+              style="
+                font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                line-height: 1.5;
+                font-weight: 400;
+                margin: 0 0 1rem 0;
+                color: #fff;
+              "
+            >
+              Através do botão de agendamento ao lado, você poderá marcar a
+              <b
+                >primeira chamada da avaliação da NP2</b
+              >, que será realizada <b>presencialmente</b> em uma de nossas
+              unidades.
+            </p>
+            <p
+              style="
+                font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                line-height: 1.5;
+                font-weight: 400;
+                margin: 0 0 1rem 0;
+                color: #fff;
+              "
+            >
+              Após a data definida no calendário acadêmico, será possível
+              <b
+                >agendar a segunda chamada</b
+              >, conforme <b>disponibilidade</b>.
+            </p>
+            <p
+              style="
+                font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                line-height: 1.5;
+                font-weight: 400;
+                margin: 0 0 1rem 0;
+                color: #fff;
+              "
+            >
+              A avaliação é <b>exclusivamente presencial</b>, e o
+              <b>agendamento é obrigatório</b>. Contamos com sua atenção e
+              pontualidade. Boa prova!
+            </p>
+          </div>
+
+          <!-- Coluna da Direita: Observação e Botão -->
+          <div style="flex: 0 0 35%; min-width: 250px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 1rem;">
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+              <strong
+                style="
+                  font-weight: 700;
+                  font-size: 1.1rem;
+                  color: transparent;
+                  background-image: linear-gradient(to right, #f29a00, #ffc400);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+                >Observação:</strong
+              >
+              Quem já participou da primeira chamada e tentar agendar a segunda
+              não conseguirá acessar a prova.
+            </p>
+
+            <!-- Botão de Agendamento -->
+            <a
+              href="#"
+              target="_blank"
+              style="
+                display: inline-block;
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 12px 20px;
+                background-color: #ffc400;
+                color: #000000;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: 700;
+                font-size: 1.05rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s, transform 0.2s;
+              "
+              onmouseover="this.style.backgroundColor='#ffaa18'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.backgroundColor='#ffc400'; this.style.transform='scale(1)'"
+            >
+              <span style="margin-right: 0.5rem">&#x1F4C5;</span> Agendar Avaliação
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

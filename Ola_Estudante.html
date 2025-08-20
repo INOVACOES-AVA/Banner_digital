@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Aula ao Vivo</title>
+  </head>
+  <body
+    style="
+      font-family: Inter, Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      margin: 0;
+    "
+  >
+    <!-- Contêiner principal do banner com cantos arredondados e a nova imagem de fundo azul -->
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/draftfile.php/748767/user/draft/191798347/main-banner%20%281%29.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 64rem;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+      "
+    >
+      <!-- Overlay preto com opacidade de 60% -->
+      <div
+        style="
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 2rem;
+          position: absolute;
+          inset: 0;
+        "
+      ></div>
+
+      <!-- Conteúdo do banner -->
+      <div style="position: relative; z-index: 10; padding: 1rem">
+
+        <!-- Título principal com gradiente -->
+        <P
+          style="
+            font-size: clamp(1.5rem, 7vw, 1.4rem);
+            line-height: 1;
+            font-weight: 800;
+            color: transparent;
+            background-image: linear-gradient(to right, #ffaa18, #ffc400);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 1rem 0; /* Espaço reduzido */
+            padding-top: 1rem; /* Novo padding para ajuste superior */
+            text-align: center;
+          "
+        >
+          Olá, estudantes!
+        </P>
+
+        <!-- Descrição da aula em parágrafos -->
+        <div style="padding: 0 2.5rem 1rem">
+          <p
+            style="
+              font-size: clamp(1rem, 4vw, 1.2rem);
+              font-weight: 500;
+              line-height: 1.5;
+              color: white;
+              margin: 0;
+              text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            "
+          >
+            Nossa aula ao vivo será nos dias
+            <span style="font-weight: 700;">[Dia da Semana], [Data],</span> às
+            <span style="font-weight: 700;">[Hora]</span>.
+          </p>
+          <p
+            style="
+              font-size: clamp(1rem, 4vw, 1.2rem);
+              font-weight: 500;
+              line-height: 1.5;
+              color: white;
+              margin: 0.3rem 0;
+              text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            "
+          >
+            Sou o(a) Professor(a)
+            <span style="font-weight: 700;">[Nome do Professor]</span> e irei
+            abordar os temas
+            <span style="font-weight: 700;">[temas da aula]</span>.
+          </p>
+          <p
+            style="
+              font-size: clamp(1rem, 4vw, 1.3rem);
+              font-weight: 700;
+              line-height: 1.5;
+              color: transparent;
+              background-image: linear-gradient(to right, #ffaa18, #ffc400);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              margin: 1rem 0 0;
+            "
+          >
+            Participem!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

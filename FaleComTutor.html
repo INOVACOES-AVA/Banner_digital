@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Fale com Tutor</title>
+  </head>
+  <body
+    style="
+      font-family: Inter, Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+    "
+  >
+    <!-- Contêiner principal do banner com cantos arredondados e a nova imagem de fundo -->
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/pluginfile.php/1004305/course/section/240343/main-banner%20%281%29.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 64rem;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+      "
+    >
+      <!-- Overlay preto com opacidade de 60% -->
+      <div
+        style="
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 2rem;
+          position: absolute;
+          inset: 0;
+        "
+      ></div>
+
+      <!-- Conteúdo do banner -->
+      <div
+        style="
+          position: relative;
+          z-index: 10;
+          padding: 1.5rem 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div style="flex: 1; min-width: 230px; padding: 6px">
+          <h2
+            style="
+              margin: 0 0 1.5rem 0;
+              font-size: clamp(1.3rem, 5vw, 2rem);
+              font-weight: 800;
+              color: transparent;
+              background-image: linear-gradient(to right, #ffaa18, #ffc400);
+              background-clip: text;
+              -webkit-background-clip: text;
+            "
+          >
+            Fale com Tutor (a)
+          </h2>
+          <p
+            style="
+              margin: 0rem 0;
+              font-size: clamp(1rem, 3.5vw, 1.2rem);
+              color: #f0f9ff;
+              line-height: 1.5;
+            "
+          >
+            Precisa de ajuda com o AVA? Nosso(a) tutor(a) está disponível para
+            te apoiar.
+            <br />
+            <strong>Clique no botão abaixo e fale pelo WhatsApp.</strong>
+          </p>
+        </div>
+        <div style="margin-top: 1.5rem; text-align: center; width: 100%">
+          <a
+            href="https://digital.uniateneu.edu.br/[LINK]"
+            target="_blank"
+            style="
+              display: block;
+              width: 100%;
+              max-width: 250px;
+              margin: 0 auto;
+              text-align: center;
+              padding: 12px 20px;
+              background-color: #0d963f;
+              color: #ffffff;
+              text-decoration: none;
+              border-radius: 8px;
+              font-weight: 700;
+              font-size: 1.05rem;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+              transition: background-color 0.3s;
+            "
+            >📲 Acessar WhatsApp</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

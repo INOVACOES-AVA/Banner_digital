@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Banner Calendário</title>
+  </head>
+  <body
+    style="
+      font-family: Inter, Arial, sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    "
+  >
+    <!-- Contêiner principal do banner com cantos arredondados e a nova imagem de fundo -->
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/pluginfile.php/1084014/mod_label/intro/YELLOW.jpg?time=1755699740802');
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+      "
+    >
+      <!-- Conteúdo do banner -->
+      <div style="position: relative; z-index: 10">
+        <!-- Logo centralizada no topo -->
+        <div
+          style="
+            padding: 1rem 0 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <img
+            src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510"
+            alt="Logo UniATENEU"
+            style="
+              height: 4rem;
+              width: 15rem;
+              max-width: 60vw;
+              object-fit: contain;
+              filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+            "
+          />
+        </div>
+
+        <!-- Título principal e subtítulo -->
+        <div style="padding: 0 2.5rem 0.5rem">
+          <h2
+            style="
+              font-size: clamp(1.5rem, 7vw, 2.4rem);
+              line-height: 1;
+              font-weight: 800;
+              color: black;
+              margin: 0;
+              text-align: center;
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            "
+          >
+            CALENDÁRIO 2025.1.2
+          </h2>
+          <p
+            style="
+              font-size: 1.2rem;
+              font-weight: 700;
+              color: #000000;
+              margin: 0.5rem 0 1.5rem;
+              text-align: center;
+              text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            "
+          >
+            Disciplina Amarela
+          </p>
+        </div>
+
+        <!-- Contêiner flexível para as duas colunas de conteúdo -->
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 0 1rem 2rem;
+          "
+        >
+          <!-- Coluna da Tabela do Calendário -->
+          <div
+            style="
+              flex: 1 1 55%;
+              min-width: 300px;
+              border-radius: 1rem;
+              overflow: hidden;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            "
+          >
+            <table
+              style="
+                width: 100%;
+                border-collapse: collapse;
+                border-radius: 1rem;
+                overflow: hidden;
+              "
+            >
+              <thead>
+                <tr>
+                  <th
+                    style="
+                      background-color: #000000;
+                      color: #fff;
+                      padding: 0.75rem;
+                      /* Centralizando o título */
+                      text-align: center;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    <strong
+                      style="
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: transparent;
+                        background-image: linear-gradient(
+                          to right,
+                          #f29a00,
+                          #ffc400
+                        );
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                      "
+                    >
+                      Informações Importantes
+                    </strong>
+                  </th>
+                  <th
+                    style="
+                      background-color: #000000;
+                      padding: 0.75rem;
+                      /* Centralizando o título */
+                      text-align: center;
+                    "
+                  >
+                    <strong
+                      style="
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: transparent;
+                        background-image: linear-gradient(
+                          to right,
+                          #f29a00,
+                          #ffc400
+                        );
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                      "
+                    >
+                      Datas
+                    </strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: rgba(0, 0, 0, 0.8)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    Avaliação NP1 (Questionários)
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    01 de Agosto a 30 de Setembro
+                  </td>
+                </tr>
+                <tr style="background-color: rgba(0, 0, 0, 0.9)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    Maratona do Conhecimento
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    21 de Agosto
+                  </td>
+                </tr>
+                <tr style="background-color: rgba(0, 0, 0, 0.8)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    Agendamento Avaliação NP2
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    04 de Agosto a 18 de Setembro
+                  </td>
+                </tr>
+                <tr style="background-color: rgba(0, 0, 0, 0.9)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    Avaliação NP2 (Presencial)
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    29 de Setembro a 04 de Outubro
+                  </td>
+                </tr>
+                <tr style="background-color: rgba(0, 0, 0, 0.8)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    Agendamento 2ª Chamada NP2
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    06 a 09 de Outubro
+                  </td>
+                </tr>
+                <tr style="background-color: rgba(0, 0, 0, 0.9)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    2ª Chamada Avaliação NP2 (Presencial)
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    11 de Outubro
+                  </td>
+                </tr>
+                <tr style="background-color: rgba(0, 0, 0, 0.8)">
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      text-align: left;
+                      /* Adicionando a borda à direita para separar as colunas */
+                      border-right: 1px solid rgba(255, 255, 255, 0.2);
+                    "
+                  >
+                    Avaliação Final (Recuperação de Nota)
+                  </td>
+                  <td
+                    style="
+                      padding: 0.75rem;
+                      /* Alinhando à esquerda o conteúdo da coluna de datas */
+                      text-align: left;
+                    "
+                  >
+                    22 e 23 de Outubro
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Coluna da Legenda de Cores -->
+          <div
+            style="
+              flex: 1 1 35%;
+              min-width: 250px;
+              background-color: rgba(0, 0, 0, 0.9);
+              border-radius: 1rem;
+              padding: 1.5rem;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 1rem;
+            "
+          >
+            <p
+              style="
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: transparent;
+                background-image: linear-gradient(to right, #f29a00, #ffc400);
+                background-clip: text;
+                -webkit-background-clip: text;
+                margin: 0;
+                text-align: center;
+                width: 100%;
+              "
+            >
+              Entenda as Cores das Disciplinas
+            </p>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+              <span
+                style="
+                  /* Aumentado o tamanho da bolinha */
+                  width: 2rem;
+                  height: 2rem;
+                  background-color: #0b9bd8;
+                  border-radius: 50%;
+                  flex-shrink: 0;
+                  margin-top: 0.25rem;
+                "
+              ></span>
+              <p style="text-align: left; margin: 0; line-height: 1.4">
+                <span style="font-weight: 600; color: #0b9bd8"
+                  >Disciplina Azul</span
+                ><br />Avaliação NP2 Presencial (Agendamento Obrigatório)
+              </p>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+              <span
+                style="
+                  /* Aumentado o tamanho da bolinha */
+                  width: 2rem;
+                  height: 2rem;
+                  background-color: #55c85b;
+                  border-radius: 50%;
+                  flex-shrink: 0;
+                  margin-top: 0.25rem;
+                "
+              ></span>
+              <p style="text-align: left; margin: 0; line-height: 1.4">
+                <span style="font-weight: 600; color: #55c85b"
+                  >Disciplina Verde</span
+                ><br />Sem Avaliação NP2 Presencial
+              </p>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem">
+              <span
+                style="
+                  /* Aumentado o tamanho da bolinha */
+                  width: 2rem;
+                  height: 2rem;
+                  background-color: #e5a700;
+                  border-radius: 50%;
+                  flex-shrink: 0;
+                  margin-top: 0.25rem;
+                "
+              ></span>
+              <p style="text-align: left; margin: 0; line-height: 1.4">
+                <span style="font-weight: 600; color: #e5a700"
+                  >Disciplina Amarela</span
+                ><br />Avaliação NP2 Presencial (Agendamento Obrigatório)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
