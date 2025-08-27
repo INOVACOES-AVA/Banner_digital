@@ -1,0 +1,167 @@
+<!-- Este código HTML é o terceiro slide do carrossel, focado no Cronograma. -->
+<!-- Ele é otimizado para o Moodle/AVA e usa estilos inline para compatibilidade. -->
+
+<div
+  style="
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  "
+>
+  <!-- Logo da instituição -->
+  <div
+    style="
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background-color: #f9fafb;
+    "
+  >
+    <img
+      src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510"
+      alt="Logo UniAteneu"
+      style="height: 3.5rem; width: auto"
+      onerror="this.onerror=null; this.src='https://placehold.co/128x64/FFFFFF/000000?text=Logo+UniAteneu';"
+    />
+  </div>
+
+  <!-- Área principal com imagem de fundo e sobreposição para legibilidade -->
+  <div
+    style="
+      position: relative;
+      height: 14rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      background-image: url('https://digital.uniateneu.edu.br/draftfile.php/748767/user/draft/291488864/main-banner%20%281%29.png');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <div
+      style="position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.4)"
+    ></div>
+    <div style="position: relative">
+      <div
+        style="
+          font-size: 2rem;
+          font-weight: 800;
+          color: white;
+          line-height: 1.25;
+          filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07))
+            drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
+        "
+      >
+        <span style="display: block">DATAS E</span>
+        <span style="display: block; margin-top: 0.25rem">CRONOGRAMA</span>
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    "
+  >
+    <!-- Seção de Períodos de Agendamento -->
+    <p style="color: #1f2937; font-size: 1.25rem; font-weight: bold">
+      Períodos de Agendamento
+    </p>
+    <p style="color: #4b5563; font-size: 1rem; font-weight: normal">
+      <span style="font-weight: bold">NP1:</span> de 01 a 23 de setembro<br />
+      <span style="font-weight: bold">NP2:</span> de 03 a 25 de novembro
+    </p>
+
+    <!-- Seção de Datas das Provas -->
+    <p style="color: #1f2937; font-size: 1.25rem; font-weight: bold">
+      Datas das Provas
+    </p>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        background-color: #fefce8;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid #facc15;
+      "
+    >
+      <p style="color: #1f2937; font-size: 1rem; font-weight: bold">
+        Área Amarela:
+      </p>
+      <p style="color: #4b5563; font-size: 1rem; font-weight: normal">
+        <span style="font-weight: bold">NP1:</span> de 06 a 10 de outubro<br /><span
+          style="font-weight: bold"
+          >NP2:</span
+        >
+        de 08 a 12 de dezembro
+      </p>
+    </div>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        background-color: #f0fdf4;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid #4ade80;
+      "
+    >
+      <p style="color: #1f2937; font-size: 1rem; font-weight: bold">
+        Área Verde:
+      </p>
+      <p style="color: #4b5563; font-size: 1rem; font-weight: normal">
+        <span style="font-weight: bold">NP1:</span> de 29 de setembro a 03 de
+        outubro<br /><span style="font-weight: bold">NP2:</span> de 01 a 05 de
+        dezembro
+      </p>
+    </div>
+  </div>
+
+  <div
+    style="
+      padding: 1rem 1.5rem;
+      background-color: #f9fafb;
+      display: flex;
+      justify-content: center;
+    "
+  >
+    <a
+      href="https://agendamento.uniateneu.edu.br/#/login"
+      target="_blank"
+      style="
+        background-color: #2563eb;
+        color: white;
+        font-weight: bold;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition-property: background-color, transform;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+      "
+    >
+      AGENDAR AGORA
+    </a>
+  </div>
+</div>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="windows-1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner de Pesquisa de Satisfação Acadêmica</title>
+  </head>
+  <body
+    style="
+      font-family: Inter, Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+      margin: 0;
+    "
+  >
+    <!-- Contêiner principal do banner com cantos arredondados -->
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/draftfile.php/748767/user/draft/530016958/main-banner%20%281%29.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 65rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        text-align: center;
+      "
+    >
+      <!-- Overlay preto com 60% de opacidade para escurecer a imagem de fundo -->
+      <div
+        style="
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 2rem;
+          position: absolute;
+          inset: 0;
+        "
+      ></div>
+      <!-- Conteúdo do banner -->
+      <div style="position: relative; z-index: 10; padding: 1.5rem 2rem 2rem">
+        <!-- Título principal com gradiente de cor no texto e a logo -->
+        <p
+          style="
+            font-size: clamp(1.5rem, 5vw, 2.25rem);
+            font-weight: 800;
+            color: transparent;
+            background-image: linear-gradient(to right, #f29a00, #ffc400);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0 0 1rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <img
+            src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510"
+            alt="Logo UniATENEU"
+            style="
+              height: 4rem;
+              width: 15rem;
+              display: inline-block;
+              margin-bottom: 0.5rem;
+            "
+          />
+          Pesquisa de Satisfação Acadêmica
+        </p>
+
+        <!-- Contêiner de duas colunas, com a coluna da esquerda mais larga e espaço reduzido entre elas -->
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center; /* Centraliza verticalmente as colunas */
+            gap: 2rem;
+            margin-top: 1rem;
+          "
+        >
+          <!-- Coluna da Esquerda: Conteúdo principal da pesquisa, ocupando mais espaço (flex: 3) -->
+          <div style="flex: 3; min-width: 300px; text-align: left">
+            <p
+              style="
+                font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                line-height: 1.6;
+                font-weight: 400;
+                color: white;
+                margin: 0 0 1rem 0;
+              "
+            >
+              Contribua com nossa melhoria contínua avaliando:
+            </p>
+            <ul
+              style="
+                text-align: left;
+                font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                line-height: 1.6;
+                font-weight: 400;
+                color: white;
+                margin: 0 0 1rem 0;
+                list-style-type: disc;
+                list-style-position: outside;
+                padding-left: 1.5rem;
+              "
+            >
+              <li style="margin-bottom: 0.5rem">
+                <span
+                  style="
+                    font-weight: bold;
+                    color: transparent;
+                    background-image: linear-gradient(
+                      to right,
+                      #f29a00,
+                      #ffc400
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                  >Autoavaliação </span
+                >- Seu desempenho e compromisso acadêmico
+              </li>
+              <li style="margin-bottom: 0.5rem">
+                <span
+                  style="
+                    font-weight: bold;
+                    color: transparent;
+                    background-image: linear-gradient(
+                      to right,
+                      #f29a00,
+                      #ffc400
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                >
+                  Ambiente Virtual de Aprendizagem (AVA)
+                </span>
+                - Facilidade de uso e recursos
+              </li>
+              <li style="margin-bottom: 0.5rem">
+                <span
+                  style="
+                    font-weight: bold;
+                    color: transparent;
+                    background-image: linear-gradient(
+                      to right,
+                      #f29a00,
+                      #ffc400
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                >
+                  Tutor/Professor
+                </span>
+                - Qualidade das aulas e suporte pedagógico
+              </li>
+              <li style="margin-bottom: 0.5rem">
+                <span
+                  style="
+                    font-weight: bold;
+                    color: transparent;
+                    background-image: linear-gradient(
+                      to right,
+                      #f29a00,
+                      #ffc400
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                >
+                  Atendimento Polo
+                </span>
+                - Infraestrutura e qualidade do atendimento
+              </li>
+              <li style="margin-bottom: 0.5rem">
+                <span
+                  style="
+                    font-weight: bold;
+                    color: transparent;
+                    background-image: linear-gradient(
+                      to right,
+                      #f29a00,
+                      #ffc400
+                    );
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                  "
+                >
+                  Sugestões </span
+                >- Compartilhe ideias para aprimorarmos sua experiência
+              </li>
+            </ul>
+          </div>
+          <!-- Coluna da Direita: Frase de incentivo, botão e nota, ocupando menos espaço (flex: 1) -->
+          <div
+            style="
+              flex: 1;
+              min-width: 320px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <p
+              style="
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                font-weight: 800;
+                color: transparent;
+                background-image: linear-gradient(to right, #f29a00, #ffc400);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin: 0 0 1rem 0;
+              "
+            >
+              Sua opinião é fundamental!
+            </p>
+            <!-- Botão de Agendamento -->
+            <a
+              href="https://digital.uniateneu.edu.br/mod/feedback/view.php?id=698257"
+              target="_blank"
+              style="
+                display: inline-block;
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+                padding: 12px 20px;
+                background-color: #ffc400;
+                color: #000000;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: bold;
+                font-size: 1.05rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.3s, transform 0.2s;
+              "
+              onmouseover="this.style.backgroundColor='#ffaa18'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.backgroundColor='#ffc400'; this.style.transform='scale(1)'"
+            >
+              <span style="margin-right: 0.5rem">📝</span> Ir para a Pesquisa
+            </a>
+            <p
+              style="
+                font-size: clamp(0.8rem, 3vw, 1rem);
+                font-weight: bold;
+                color: transparent;
+                background-image: linear-gradient(to right, #f29a00, #ffc400);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-top: 1rem;
+              "
+            >
+              Respostas anônimas e confidenciais
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="windows-1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner de Aviso e Instruções</title>
+  </head>
+  <body
+    style="
+      font-family: Inter, Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+      margin: 0;
+    "
+  >
+    <!-- Contêiner principal do banner com cantos arredondados -->
+    <div
+      style="
+        background-image: url('https://digital.uniateneu.edu.br/pluginfile.php/1004305/course/section/240343/main-banner%20%281%29.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 64rem;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        text-align: center;
+      "
+    >
+      <!-- Overlay preto com 60% de opacidade para escurecer a imagem de fundo -->
+      <div
+        style="
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 2rem;
+          position: absolute;
+          inset: 0;
+        "
+      ></div>
+      <!-- Conteúdo do banner -->
+      <div style="position: relative; z-index: 10">
+        <!-- Parte superior amarela com o gradiente e a logo -->
+        <div
+          style="
+            background: linear-gradient(to right, #f29a00, #ffc400);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <!-- Imagem do logo UniATENEU -->
+          <img
+            src="https://digital.uniateneu.edu.br/pluginfile.php/1082837/mod_label/intro/Logo_colorida_borda.png?time=1755543570510"
+            alt="Logo UniATENEU"
+            style="height: 4rem; width: 15rem"
+          />
+        </div>
+
+        <!-- Conteúdo principal azul escuro com layout de duas colunas em tabela -->
+        <div style="padding: 2rem 1.5rem">
+          <!-- Título principal em uma linha completa -->
+          <p
+            style="
+              font-size: clamp(1.5rem, 5vw, 2.25rem);
+              font-weight: 800;
+              color: transparent;
+              background-image: linear-gradient(to right, #f29a00, #ffc400);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              margin: 0 0 1.5rem 0;
+              text-align: center;
+            "
+          >
+            Avaliação NP2
+          </p>
+
+          <table
+            role="presentation"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            style="width: 100%; border-collapse: collapse; margin: 0 auto"
+          >
+            <tr>
+              <!-- Coluna da esquerda: texto e lista de instruções -->
+              <td
+                style="
+                  width: 70%;
+                  vertical-align: top;
+                  padding-right: 2rem;
+                  text-align: left;
+                "
+              >
+                <p
+                  style="
+                    font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                    line-height: 1.6;
+                    font-weight: 400;
+                    color: white;
+                    margin: 0 0 1rem 0;
+                  "
+                >
+                  Para realizar a Avaliação da Nota Parcial 2 (NP2), que
+                  ocorrerá presencialmente, o agendamento é obrigatório!
+                </p>
+
+                <!-- Tópicos -->
+                <ul
+                  style="
+                    font-size: clamp(0.9rem, 3.5vw, 1.125rem);
+                    line-height: 1.6;
+                    font-weight: 400;
+                    color: white;
+                    margin: 0 0 1rem 0;
+                    list-style-type: disc;
+                    list-style-position: outside;
+                    padding-left: 1.5rem;
+                  "
+                >
+                  <li style="margin-bottom: 0.5rem">
+                    Escolha com antecedência o dia e horário desejados para
+                    garantir sua participação na avaliação.
+                  </li>
+                  <li style="margin-bottom: 0.5rem">
+                    Consulte o calendário da disciplina e garanta seu
+                    agendamento dentro do prazo!
+                  </li>
+                  <li style="margin-bottom: 0.5rem">
+                    No dia da avaliação, é indispensável apresentar um documento
+                    original com foto para a realização das avaliações.
+                  </li>
+                </ul>
+              </td>
+
+              <!-- Coluna da direita: frase motivacional e botão -->
+              <td style="width: 30%; vertical-align: top; text-align: center">
+                <table
+                  role="presentation"
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  style="
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 1rem;
+                  "
+                >
+                  <tr>
+                    <td>
+                      <!-- Frase final de incentivo com gradiente de cor no texto -->
+                      <p
+                        style="
+                          font-size: clamp(1rem, 4vw, 1.3rem);
+                          font-weight: 700;
+                          color: transparent;
+                          background-image: linear-gradient(
+                            to right,
+                            #f29a00,
+                            #ffc400
+                          );
+                          background-clip: text;
+                          -webkit-background-clip: text;
+                          -webkit-text-fill-color: transparent;
+                          margin: 0 0 1rem 0;
+                        "
+                      >
+                        Organize-se, prepare-se e conquiste excelentes
+                        resultados!
+                      </p>
+
+                      <!-- Botão de Agendamento -->
+                      <a
+                        href="https://digital.uniateneu.edu.br/course/view.php?id=38744&section=4&singlesec=4"
+                        target="_blank"
+                        style="
+                          display: inline-block;
+                          width: 100%;
+                          max-width: 250px;
+                          text-align: center;
+                          padding: 12px 20px;
+                          background-color: #ffc400;
+                          color: #000000;
+                          text-decoration: none;
+                          border-radius: 8px;
+                          font-weight: 700;
+                          font-size: 1.05rem;
+                          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                          transition: background-color 0.3s, transform 0.2s;
+                        "
+                        onmouseover="this.style.backgroundColor='#ffaa18'; this.style.transform='scale(1.05)'"
+                        onmouseout="this.style.backgroundColor='#ffc400'; this.style.transform='scale(1)'"
+                      >
+                        <span style="margin-right: 0.5rem">&#x1F4C5;</span> Ir
+                        para o Agendamento
+                      </a>
+                      <p></p>
+                      <p
+                        style="
+                          font-size: clamp(1rem, 4vw, 1.3rem);
+                          font-weight: 700;
+                          color: transparent;
+                          background-image: linear-gradient(
+                            to right,
+                            #f29a00,
+                            #ffc400
+                          );
+                          background-clip: text;
+                          -webkit-background-clip: text;
+                          -webkit-text-fill-color: transparent;
+                          margin: 0 0 1rem 0;
+                        "
+                      >
+                        Sucesso!
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
